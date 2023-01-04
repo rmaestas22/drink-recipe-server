@@ -1,2 +1,3 @@
-class Player < ActiveRecord::Base
+class User < ActiveRecord::Base
   has_many :drinks
+end

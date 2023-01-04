@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2023_01_03_182820) do
 
-  create_table "drink", force: :cascade do |t|
+  create_table "drinks", force: :cascade do |t|
     t.string "drink_name"
     t.text "ingredients"
     t.text "instructions"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_01_03_182820) do
     t.integer "user_id"
   end
 
-  create_table "user", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
   end
