@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2023_01_03_182820) do
     t.text "instructions"
     t.integer "rating"
     t.boolean "made"
+    t.string "image_url"
     t.integer "user_id"
   end
 
