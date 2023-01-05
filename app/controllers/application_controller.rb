@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
   ## Create new user
   post "/users" do
     user = User.create(name: params[:name], email: params[:email])
+    user.to_json
   end
 
   ## Read all users
@@ -26,7 +27,8 @@ class ApplicationController < Sinatra::Base
   # DRINKS
   ## Create new drink
   post "/drinks" do
-    drink = Drink.create(drink_name: params[:drink_name], ingredients: params[:ingredients], instructions: params[:instructions], rating: params[:rating], made: params[:made], user_id: params[:user_id])
+    drink = Drink.create(drink_name: params[:drink_name], ingredients: params[:ingredients], instructions: params[:instructions], rating: params[:rating], made: params[:made], image_url: params[:image_url], user_id: params[:user_id])
+    drink.to_json
   end
 
   ## Read all drinks
@@ -44,7 +46,7 @@ class ApplicationController < Sinatra::Base
   ## Update drink
   patch "/drinks/:id" do
     drink = Drink.find(params[:id])
-    drink.update(drink_name: params[:drink_name], ingredients: params[:ingredients], instructions: params[:instructions], rating: params[:rating], made: params[:made], user_id: params[:user_id])
+    drink.update(drink_name: params[:drink_name], ingredients: params[:ingredients], instructions: params[:instructions], rating: params[:rating], made: params[:made], image_url: params[:image_url], user_id: params[:user_id])
     drink.to_json
   end
 
