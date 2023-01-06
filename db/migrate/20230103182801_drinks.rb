@@ -5,7 +5,6 @@ class Drinks < ActiveRecord::Migration[6.1]
       t.text :ingredients
       t.text :instructions
       t.integer :rating
-      t.boolean :made
       t.string :image_url
       t.integer :user_id
 
